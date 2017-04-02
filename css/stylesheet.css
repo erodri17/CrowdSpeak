@@ -1,0 +1,125 @@
+/**
+ * @Author: Elmer Rodriguez <elmerxavierrodriguez>
+ * @Date:   04-01-2017 <09:12:16 PM>
+ * @Email:  elmer.rodriguez6@gmail.com
+ * @Filename: stylesheet.css
+ * @Last modified by:   elmerxavierrodriguez
+ * @Last modified time: 04-02-2017 <01:47:22 AM>
+ * @Copyright: © 2017 ELMER RODRIGUEZ ALL RIGHTS RESERVED
+ */
+
+/* All the elements in this file are organized using SMACSS,
+which stands for "Scalable and Modular Arquitecture for CSS" */
+
+/*There are five types of categories:
+
+Base (e.g.  body, p, a ...)
+Layout(e.g. anything used related to the manipulation of the layout )
+Module ( It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components.)
+State (A state is something that augments and overrides all other styles. e.g javascript )
+Theme (General elements/attributes that are repeated throughtout the website e.g colors)*/
+
+/******************/
+/* SECTION - BASE */
+/******************/
+body{}
+  p{}
+
+
+/************************/
+/* END - SECTION - BASE */
+/************************/
+
+
+
+/*******************/
+/* SECTION: Layout */
+/*******************/
+
+/* class used for layout of the left side of the webpage */
+.left-panel{
+  float: left;
+  width: 47%;
+  margin-left: 40px;
+}
+
+/* class used for layout of the right side of the webpage */
+.right-panel{
+  background-color: grey;
+  float: right;
+  width: 47%;
+  margin-right:40px;
+}
+
+
+/**************************/
+/* END - SECTION - LAYOUT */
+/**************************/
+
+
+
+
+
+
+/********************/
+/* SECTION - MODULE */
+/********************/
+
+
+/**************************/
+/* END - SECTION - MODULE */
+/**************************/
+
+/* section to manipulate the you tube video*/
+.video{
+
+}
+
+.custom-comment{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+
+/* spacing the radio buttons from each other*/
+input[type="radio"]{
+  margin: 15 10px 0 10px;
+}
+
+/*******************/
+/* SECTION - STATE */
+/*******************/
+
+/*************************/
+/* END - SECTION - STATE */
+/*************************/
+
+
+/*******************/
+/* SECTION - THEME */
+/*******************/
+
+
+/* contains the general characteristics of all the buttons */
+button{
+  color: blue;
+  font-size: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px /* make edges circular*/
+  border: 2px solid #73AD21; /* make edges a certain color and thickness */
+  margin-top: 30px; /* shifts the top edge of the button 30 pixels up */
+  margin-bottom: 20px; /* shifts the bottom edge of the button 30 down*/
+
+}
+
+/* changes the size of the text in the radio buttons*/
+.radio-text{
+  font-size: 20px;
+}
+
+/*************************/
+/* END - SECTION - THEME */
+/*************************/
