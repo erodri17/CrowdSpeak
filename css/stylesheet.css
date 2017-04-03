@@ -4,7 +4,7 @@
  * @Email:  elmer.rodriguez6@gmail.com
  * @Filename: stylesheet.css
  * @Last modified by:   elmerxavierrodriguez
- * @Last modified time: 04-02-2017 <01:47:22 AM>
+ * @Last modified time: 04-02-2017 <04:31:27 PM>
  * @Copyright: © 2017 ELMER RODRIGUEZ ALL RIGHTS RESERVED
  */
 
@@ -25,6 +25,9 @@ Theme (General elements/attributes that are repeated throughtout the website e.g
 body{}
   p{}
 
+fieldset{
+  margin-right: 20px;
+}
 
 /************************/
 /* END - SECTION - BASE */
@@ -40,18 +43,39 @@ body{}
 .left-panel{
   float: left;
   width: 47%;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 /* class used for layout of the right side of the webpage */
 .right-panel{
-  background-color: grey;
+  /*background-color:;*/
   float: right;
   width: 47%;
-  margin-right:40px;
+  margin-right: 30px;
+
+}
+
+/* deals with the positioning of the submit button*/
+.submit-button{
+  float: right;
+  margin-right: 10px;
+}
+
+/* deals with the positioning of the comment mode button*/
+.comment-button{
+
+}
+
+/* deals with the positioning of the correct mode button*/
+.correct-button{
+
 }
 
 
+/* contains the radio button for the CUSTOM COMMENT section */
+.special-radio{
+
+}
 /**************************/
 /* END - SECTION - LAYOUT */
 /**************************/
@@ -79,7 +103,6 @@ body{}
   margin-top: 30px;
   margin-bottom: 10px;
 }
-
 
 /* spacing the radio buttons from each other*/
 input[type="radio"]{
@@ -110,7 +133,7 @@ button{
   padding-bottom: 10px;
   border-radius: 10px /* make edges circular*/
   border: 2px solid #73AD21; /* make edges a certain color and thickness */
-  margin-top: 30px; /* shifts the top edge of the button 30 pixels up */
+  margin-top: 20px; /* shifts the top edge of the button 30 pixels up */
   margin-bottom: 20px; /* shifts the bottom edge of the button 30 down*/
 
 }
