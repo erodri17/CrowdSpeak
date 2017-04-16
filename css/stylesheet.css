@@ -19,10 +19,13 @@ body {}
 
 p {}
 
+/* DEFAULT COMMENTS block*/
 fieldset {
-  margin-right: 20px;
+margin-bottom: 15px;
+font-size: 15px;
 }
 
+/* navigation bar basic attributes */
 .navigation-bar{
   overflow: hidden;
   background-color: #333;
@@ -46,7 +49,7 @@ fieldset {
   float: left;
   width: 47%;
   margin-left: 2px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 
@@ -56,8 +59,8 @@ fieldset {
   /*background-color:;*/
   float: right;
   width: 47%;
-  margin-right: 30px;
-  padding-top: 20px;
+  margin-right:60px;
+  padding-top: 10px;
 }
 
 
@@ -65,25 +68,32 @@ fieldset {
 
 .submit-button {
   float: right;
-  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom:10px;
+
+
 }
 
 /* deals with the positioning of the custom comment section*/
 .custom-comment {
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15;
 }
 
-/* deals with the positioning of the comment mode button*/
+/* "comment mode" deals with the positioning of the comment mode button*/
 
 .comment-button {
   background-color: #9ACA41;
+  margin-left: 40px;
 }
 
 
-/* deals with the positioning of the correct mode button*/
+/* "correct-button" deals with the positioning of the correct mode button*/
 
-.correct-button {}
+.correct-button {
+
+}
 
 
 /* contains the radio button for the CUSTOM COMMENT section */
@@ -98,7 +108,8 @@ fieldset {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
 }
 /**************************/
 /* END - SECTION - LAYOUT */
@@ -119,7 +130,7 @@ fieldset {
 /* spacing the radio buttons from each other*/
 
 input[type="radio"] {
-  margin: 15 10px 0 10px;
+  margin: 10 10px 0 10px;
 }
 
 
@@ -128,25 +139,25 @@ input[type="radio"] {
 #unclear-comment {
   /*text-color must be #CBCA43 */
   color: #CBCA43;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #wrong-comment {
   /*text-color must be #FC371D */
   color: #FC371D;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #slowly-comment {
   /*text-color must be #0D40FB */
   color: #0D40FB;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #quickly-comment {
   /*text-color must be #FD9828*/
   color: #FD9828;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /*deals with the individual elements in the navigation bar*/
@@ -159,8 +170,6 @@ input[type="radio"] {
     background-color: #9ACA41;
     color: white;
 }
-</style>
-
 
 
 /**************************/
@@ -190,25 +199,22 @@ input[type="radio"] {
 /* contains the general characteristics of ALL the buttons */
 
 button {
-  font-size: 24px;
-  padding-left: 50px;
-  padding-right: 50px;
+  font-size: 18px;
+  padding-left: 70px;
+  padding-right: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 10px/* make edges circular*/
-  border: 2px solid #73AD21;
+  border-radius: 15px/* make edges circular*/
+  border: 2px;
   /* make edges a certain color and thickness */
-  margin-top: 20px;
+  margin-top: 10px;
   /* shifts the top edge of the button 30 pixels up */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   /* shifts the bottom edge of the button 30 down*/
 }
 
 
-/* changes the size of the text in ALL radio buttons*/
-.radio-text {
-  font-size: 20px;
-}
+
 
 
 /*************************/
