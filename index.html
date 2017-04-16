@@ -1,13 +1,23 @@
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>CrowdSpeak - University of Rochester</title>
-    <meta name="description" content="CrowdSpeak">
-    <meta name="author" content="SitePoint">
-    <link rel="stylesheet" href="css/stylesheet.css">
+  <meta charset="utf-8">
+  <title>CrowdSpeak - University of Rochester</title>
+  <meta name="description" content="CrowdSpeak">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/stylesheet.css">
 </head>
+
 <body>
-  <div class= "left-panel">
+  <!--Navigation Bar-->
+  <div class="navigation-bar">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">How it Works</a>
+    <a href="#contact">About Us</a>
+    <a href="#about">FAQ</a>
+  </div>
+  <!--END Navigation Bar-->
+  <div class="left-panel">
     <!-- you tube video -->
     <iframe class="video" width="640" height="315" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
     <!-- END you tube video -->
@@ -17,43 +27,43 @@
     <!--END two buttons on the left -->
     <!--"Default Comment" Wrapper/Text Box-->
     <form>
-        <fieldset>
-            <legend><u>DEFAULT COMMENTS</u></legend>
-            <!-- radio buttons-->
+      <fieldset>
+        <legend><u>DEFAULT COMMENTS</u></legend>
+        <!-- radio buttons-->
 
-              <input  type="radio" name="comments" value="unclear">
-                <label for="unclear" class="unclear-comment"> This section is unclear. </label><br>
-            <input  type="radio" name="comments" value="wrong">
-                <label for="wrong" class="wrong-comment"> This word might be wrong. </label><br>
-            <input  type="radio" name="comments" value="slowly">
-                <label for="slowly" class="slowly-comment"> You are speaking slowly here. </label><br>
-            <input  type="radio" name="comments" value="quickly" class="quickly-comment">
-                <label for="quickly" class="quickly-comment">You are speaking quickly here. </label><br>
-    
-            <!-- END radio buttons-->
-            <!--Custom Comment Section-->
-            <legend class="custom-comment"><u>CUSTOM COMMENT</u></legend>
-            <input  class="special-radio" type="radio" name="comments" value="custom"> <textarea name="TextBox" cols="50" rows="6">This word is rather archaic... </textarea> <br><br>
-            <!--Text and space-->
-        </fieldset>
+        <input type="radio" name="comments" value="unclear">
+        <label for="unclear" id="unclear-comment"> This section is unclear. </label><br>
+        <input type="radio" name="comments" value="wrong">
+        <label for="wrong" id="wrong-comment"> This word might be wrong. </label><br>
+        <input type="radio" name="comments" value="slowly">
+        <label for="slowly" id="slowly-comment"> You are speaking slowly here. </label><br>
+        <input type="radio" name="comments" value="quickly" class="quickly-comment">
+        <label for="quickly" id="quickly-comment">You are speaking quickly here. </label><br>
+
+        <!-- END radio buttons-->
+        <!--Custom Comment Section-->
+        <legend class="custom-comment"><u>CUSTOM COMMENT</u></legend>
+        <input class="special-radio" type="radio" name="comments" value="custom"> <textarea name="TextBox" cols="50" rows="6">This word is rather archaic... </textarea> <br><br>
+        <!--Text and space-->
+      </fieldset>
     </form>
     <!--END "Default Comment" Wrapper/Text Box-->
   </div>
-<!-- things on the right -->
-    <div class = "right-panel">
+  <!-- things on the right -->
+  <div class="right-panel">
     <!-- text box -->
     <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-        <textarea name="myTextBox" cols="115" rows="46">Enter some text...</textarea> <br>
-        <!--Text and space-->
+      <textarea name="myTextBox" cols="115" rows="46">Enter some text...</textarea> <br>
+      <!--Text and space-->
     </form>
     <!--button-->
     <button class="submit-button" type="button" name="submit">Submit</button>
     <!--END button-->
     <!-- END text box-->
   </div>
-    <!--Javascript-->
-    <script src="js/scripts.js"></script>
-    <!--END Javascript-->
+  <!--Javascript-->
+  <script src="js/scripts.js"></script>
+  <!--END Javascript-->
 </body>
 
 </html>

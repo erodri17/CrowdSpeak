@@ -1,6 +1,7 @@
 /* All the elements in this file are organized using SMACSS,
 which stands for "Scalable and Modular Arquitecture for CSS" */
 
+
 /*There are five types of categories:
 
 Base (e.g.  body, p, a ...)
@@ -9,100 +10,169 @@ Module ( It is your navigation bars and your carousels and your dialogs and your
 State (A state is something that augments and overrides all other styles. e.g javascript )
 Theme (General elements/attributes that are repeated throughtout the website e.g colors)*/
 
+
 /******************/
 /* SECTION - BASE */
 /******************/
-body{}
-  p{}
 
-fieldset{
+body {}
+
+p {}
+
+fieldset {
   margin-right: 20px;
 }
+
+.navigation-bar{
+  overflow: hidden;
+  background-color: #333;
+}
+
 
 /************************/
 /* END - SECTION - BASE */
 /************************/
 
 
-
 /*******************/
 /* SECTION: Layout */
 /*******************/
 
+/* HERE WE MANIPULATE EVERYTHING RELATED WITH POSITIONING OF MAJOR COMPONENTS IN THE WEBSITE*/
+
 /* class used for layout of the left side of the webpage */
-.left-panel{
+
+.left-panel {
   float: left;
   width: 47%;
   margin-left: 30px;
 }
 
+
 /* class used for layout of the right side of the webpage */
-.right-panel{
+
+.right-panel {
   /*background-color:;*/
   float: right;
   width: 47%;
   margin-right: 30px;
-
 }
 
+
 /* deals with the positioning of the submit button*/
-.submit-button{
+
+.submit-button {
   float: right;
   margin-right: 10px;
 }
 
-/* deals with the positioning of the comment mode button*/
-.comment-button{
-background-color: #9ACA41;
+/* deals with the positioning of the custom comment section*/
+.custom-comment {
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
+
+/* deals with the positioning of the comment mode button*/
+
+.comment-button {
+  background-color: #9ACA41;
+}
+
 
 /* deals with the positioning of the correct mode button*/
-.correct-button{
 
-
-}
+.correct-button {}
 
 
 /* contains the radio button for the CUSTOM COMMENT section */
-.special-radio{
 
+.special-radio {}
+
+/* deals with the positioning of the navigation bar in the website */
+.navigation-bar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 /**************************/
 /* END - SECTION - LAYOUT */
 /**************************/
 
 
-
-
-
-
 /********************/
 /* SECTION - MODULE */
 /********************/
+
+/* HERE WE ADD ALL THE CHANGES MADE TO INDIVIDUAL COMPONENTS OF THE WEBSITE*/
+
+/* section to manipulate the you tube video*/
+.video {}
+
+
+
+/* spacing the radio buttons from each other*/
+
+input[type="radio"] {
+  margin: 15 10px 0 10px;
+}
+
+
+/* changes the color of the individual labels in the "DEFAULT COMMENTS" section */
+
+#unclear-comment {
+  /*text-color must be #CBCA43 */
+  color: #CBCA43;
+  font-size: 20px;
+}
+
+#wrong-comment {
+  /*text-color must be #FC371D */
+  color: #FC371D;
+  font-size: 20px;
+}
+
+#slowly-comment {
+  /*text-color must be #0D40FB */
+  color: #0D40FB;
+  font-size: 20px;
+}
+
+#quickly-comment {
+  /*text-color must be #FD9828*/
+  color: #FD9828;
+  font-size: 20px;
+}
+
+/*deals with the individual elements in the navigation bar*/
+.navigation-bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navigation-bar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
 
 
 /**************************/
 /* END - SECTION - MODULE */
 /**************************/
 
-/* section to manipulate the you tube video*/
-.video{
-
-}
-
-.custom-comment{
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-/* spacing the radio buttons from each other*/
-input[type="radio"]{
-  margin: 15 10px 0 10px;
-}
 
 /*******************/
 /* SECTION - STATE */
 /*******************/
+
+
+/* Usually Javascript goes here */
+
 
 /*************************/
 /* END - SECTION - STATE */
@@ -113,48 +183,29 @@ input[type="radio"]{
 /* SECTION - THEME */
 /*******************/
 
+/* HERE WE ADD STYLES/CHANGES TO MAINTAIN A THEME AND/OR CONSISTENCY THROUGHOUT THE WEBSITE*/
 
-/* contains the general characteristics of all the buttons */
-button{
+/* contains the general characteristics of ALL the buttons */
+
+button {
   font-size: 24px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 10px /* make edges circular*/
-  border: 2px solid #73AD21; /* make edges a certain color and thickness */
-  margin-top: 20px; /* shifts the top edge of the button 30 pixels up */
-  margin-bottom: 20px; /* shifts the bottom edge of the button 30 down*/
-
+  border-radius: 10px/* make edges circular*/
+  border: 2px solid #73AD21;
+  /* make edges a certain color and thickness */
+  margin-top: 20px;
+  /* shifts the top edge of the button 30 pixels up */
+  margin-bottom: 20px;
+  /* shifts the bottom edge of the button 30 down*/
 }
-/* changes the size of the text in the radio buttons*/
-.radio-text{
+
+
+/* changes the size of the text in ALL radio buttons*/
+.radio-text {
   font-size: 20px;
-
-}
-/* changes the color of the individual labels in the "DEFAULT COMMENTS" section */
-.unclear-comment{
- /*text-color must be #CBCA43 */
-  color: #CBCA43;
-    font-size: 20px;
-}
-
-.wrong-comment{
-  /*text-color must be #FC371D */
-   color: #FC371D;
-     font-size: 20px;
-}
-
-.slowly-comment{
-  /*text-color must be #0D40FB */
-  color: #0D40FB;
-    font-size: 20px;
-}
-
-.quickly-comment{
-  /*text-color must be #FD9828*/
-  color: #FD9828;
-    font-size: 20px;
 }
 
 
