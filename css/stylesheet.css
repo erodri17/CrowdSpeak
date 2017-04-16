@@ -137,15 +137,29 @@ button{
   margin-bottom: 20px; /* shifts the bottom edge of the button 30 down*/
 
 }
-
 /* changes the size of the text in the radio buttons*/
 .radio-text{
   font-size: 20px;
 }
 
 .unclear-comment{
-  color: red;
+ /*text-color must be #CBCA43 */
+  color: #CBCA43;
 }
+
+.wrong-comment{
+/*text-color must be #FC371D */
+ color: #FC371D;
+}
+.slowly-comment{
+/*text-color must be #0D40FB */
+  color: #0D40FB;
+}
+.quickly-comment{
+/*text-color must be #FD9828*/
+  color: #FD9828;
+}
+
 
 /*************************/
 /* END - SECTION - THEME */
