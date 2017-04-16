@@ -1,15 +1,3 @@
-<!--
-@Author: Elmer Rodriguez <elmerxavierrodriguez>
-@Date:   04-01-2017 <09:10:42 PM>
-@Email:  elmer.rodriguez6@gmail.com
-@Filename: index.html
-@Last modified by:   elmerxavierrodriguez
-@Last modified time: 04-02-2017 <04:30:43 PM>
-@Copyright: © 2017 ELMER RODRIGUEZ ALL RIGHTS RESERVED
--->
-
-
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -32,12 +20,16 @@
         <fieldset>
             <legend><u>DEFAULT COMMENTS</u></legend>
             <!-- radio buttons-->
-            <label class="radio-text">
-            <input  type="radio" name="comments" value="unclear"> This section is unclear. <br>
-            <input  type="radio" name="comments" value="wrong"> This word might be wrong. <br>
-            <input  type="radio" name="comments" value="slow"> You are speaking slowly here. <br>
-            <input  type="radio" name="comments" value="quickly"> You are speaking quickly here. <br>
-          </label>
+
+              <input  type="radio" name="comments" value="unclear">
+                <label for="unclear" class="unclear-comment"> This section is unclear. </label><br>
+            <input  type="radio" name="comments" value="wrong">
+                <label for="wrong" class="wrong-comment"> This word might be wrong. </label><br>
+            <input  type="radio" name="comments" value="slowly">
+                <label for="slowly" class="slowly-comment"> You are speaking slowly here. </label><br>
+            <input  type="radio" name="comments" value="quickly" class="quickly-comment">
+                <label for="quickly" class="quickly-comment">You are speaking quickly here. </label><br>
+    
             <!-- END radio buttons-->
             <!--Custom Comment Section-->
             <legend class="custom-comment"><u>CUSTOM COMMENT</u></legend>

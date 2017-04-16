@@ -1,13 +1,3 @@
-/**
- * @Author: Elmer Rodriguez <elmerxavierrodriguez>
- * @Date:   04-01-2017 <09:12:16 PM>
- * @Email:  elmer.rodriguez6@gmail.com
- * @Filename: stylesheet.css
- * @Last modified by:   elmerxavierrodriguez
- * @Last modified time: 04-02-2017 <04:31:27 PM>
- * @Copyright: © 2017 ELMER RODRIGUEZ ALL RIGHTS RESERVED
- */
-
 /* All the elements in this file are organized using SMACSS,
 which stands for "Scalable and Modular Arquitecture for CSS" */
 
@@ -140,24 +130,31 @@ button{
 /* changes the size of the text in the radio buttons*/
 .radio-text{
   font-size: 20px;
-}
 
+}
+/* changes the color of the individual labels in the "DEFAULT COMMENTS" section */
 .unclear-comment{
  /*text-color must be #CBCA43 */
   color: #CBCA43;
+    font-size: 20px;
 }
 
 .wrong-comment{
-/*text-color must be #FC371D */
- color: #FC371D;
+  /*text-color must be #FC371D */
+   color: #FC371D;
+     font-size: 20px;
 }
+
 .slowly-comment{
-/*text-color must be #0D40FB */
+  /*text-color must be #0D40FB */
   color: #0D40FB;
+    font-size: 20px;
 }
+
 .quickly-comment{
-/*text-color must be #FD9828*/
+  /*text-color must be #FD9828*/
   color: #FD9828;
+    font-size: 20px;
 }
 
 
