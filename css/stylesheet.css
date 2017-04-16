@@ -26,6 +26,7 @@ p {}
 
 /* DEFAULT COMMENTS block*/
 
+
 fieldset {
   padding-bottom: 0px;
   font-size: 15px;
@@ -137,7 +138,12 @@ fieldset {
   font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
 }
 
+.help-button{
+float: right;
+margin-left: 700px;
+background-color: grey;
 
+}
 /**************************/
 
 
