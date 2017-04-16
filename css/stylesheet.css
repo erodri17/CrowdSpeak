@@ -45,7 +45,8 @@ fieldset {
 .left-panel {
   float: left;
   width: 47%;
-  margin-left: 30px;
+  margin-left: 2px;
+  padding-top: 20px;
 }
 
 
@@ -56,6 +57,7 @@ fieldset {
   float: right;
   width: 47%;
   margin-right: 30px;
+  padding-top: 20px;
 }
 
 
@@ -154,7 +156,7 @@ input[type="radio"] {
 }
 
 .navigation-bar a.active {
-    background-color: #4CAF50;
+    background-color: #9ACA41;
     color: white;
 }
 </style>
