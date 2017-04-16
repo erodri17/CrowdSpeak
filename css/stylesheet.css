@@ -63,11 +63,12 @@ fieldset{
 
 /* deals with the positioning of the comment mode button*/
 .comment-button{
-
+background-color: #9ACA41;
 }
 
 /* deals with the positioning of the correct mode button*/
 .correct-button{
+
 
 }
 
@@ -125,7 +126,6 @@ input[type="radio"]{
 
 /* contains the general characteristics of all the buttons */
 button{
-  color: blue;
   font-size: 24px;
   padding-left: 50px;
   padding-right: 50px;
@@ -141,6 +141,10 @@ button{
 /* changes the size of the text in the radio buttons*/
 .radio-text{
   font-size: 20px;
+}
+
+.unclear-comment{
+  color: red;
 }
 
 /*************************/
