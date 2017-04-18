@@ -1,8 +1,9 @@
 print("Content-Type: text/html")
-print()
-import ssl
+
+
 import cgi
-import wave
-import contextlib
+import cgitb
+
 form = cgi.FieldStorage()
-fname = form.getvalue("video", "error")
+fname = form["audio"].filename
+print "Got filename:", fname
