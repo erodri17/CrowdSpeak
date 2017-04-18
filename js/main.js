@@ -210,10 +210,10 @@ function download(){
         contentType: false,
         processData: false,
         success: function(data) {
-          alert("boa!");
+          alert("YAY!");
         },    
         error: function() {
-          alert("not so boa!");
+          alert("FAIL!");
         }
       });
 	
