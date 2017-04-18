@@ -21,23 +21,28 @@
 <div id="container">
     <video id="gum" autoplay muted></video>
     <video id="recorded" autoplay loop></video>
+	
+	<!-- Transcript -->
+	<div id="results">
+		<span id="final_span" class="final">Ready to start?</span>
+		<span id="interim_span" class="interim"></span>
+	</div>
 
     <div>
       <button id="record" disabled>Start Recording</button>
       <button id="play" disabled>Play</button>
       <button id="download" disabled>Download</button>
     </div>
-</div>
 	
-	<!-- Transcript -->
-	<div id="results">
-		<span id="final_span" class="final">TEST</span>
-		<span id="interim_span" class="interim"></span>
-	</div>
+	
+	
+</div>
 
   <!-- include adapter for srcObject shim -->
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
   <script src="js/main.js"></script>
+  <script src="jquery-3.2.1.js"></script>
+  <script src="my_jquery.js"></script>
   <!--
   <script src="../../../js/lib/ga.js"></script>
   -->

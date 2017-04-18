@@ -14,6 +14,7 @@
 
 /* globals MediaRecorder */
 
+
 var mediaSource = new MediaSource();
 mediaSource.addEventListener('sourceopen', handleSourceOpen, false);
 var mediaRecorder;
@@ -159,7 +160,7 @@ function play() {
   recordedVideo.src = window.URL.createObjectURL(superBuffer);
 }
 
-function download() {
+function download2() {
   var blob = new Blob(recordedBlobs, {type: 'video/webm'});
   var url = window.URL.createObjectURL(blob);
   var a = document.createElement('a');
@@ -170,13 +171,13 @@ function download() {
   a.click();
   setTimeout(function() {
     document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    //window.URL.revokeObjectURL(url);
   }, 100);
   
 
   var blob2 = new Blob([final_transcript], {type: "text/plain;charset=utf-8"});
   var url2 = window.URL.createObjectURL(blob2);
-  var a2 = document.createElement('a');
+  var a2 = document.createElement('a2');
   a2.style.display = 'none';
   a2.href = url2;
   a2.download = 'textFile.txt';
@@ -189,6 +190,35 @@ function download() {
   
   
 }
+
+
+function download(){
+	
+	var blob = new Blob(recordedBlobs, {type: 'video/webm'});
+
+      var url = (window.URL || window.webkitURL).createObjectURL(blob);
+      console.log(url);
+
+      var filename = 'test.webm';
+      var data = new FormData();
+      data.append('file', blob);
+
+      $.ajax({
+        url :  "upload.php",
+        type: 'POST',
+        data: data,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+          alert("boa!");
+        },    
+        error: function() {
+          alert("not so boa!");
+        }
+      });
+	
+} 
+
 
 var ignore_onend;
 var start_timestamp;
