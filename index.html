@@ -1,30 +1,51 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>CrowdSpeak - University of Rochester</title>
-  <meta name="description" content="CrowdSpeak">
-  <meta name="author" content="SitePoint">
+
+  <!--CSS-->
   <link rel="stylesheet" href="css/stylesheet.css">
-
-  <!--Link to FavIcon-->
-  <link rel="icon" type="image/png" href="images/crowd.png">
-  <!--END Link to FavIcon-->
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!--Boostrap-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-  <!--Navigation Bar-->
-  <div class="navigation-bar">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">How it Works</a>
-    <a href="#contact">About Us</a>
-    <a href="#about">FAQ</a>
-    <a href="#help" class="help-button">Help</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">CrowdSpeak</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">How it Works</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h3>Right Aligned Navbar</h3>
+    <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
   </div>
-  <!--END Navigation Bar-->
+
   <div class="left-panel">
     <!-- you tube video -->
-    <iframe class="video" width="585" height="300" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video" width="680" height="385" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
     <!-- END you tube video -->
     <!-- two buttons on the left -->
     <button class="correct-button" type="button">Correct Mode</button>
@@ -58,7 +79,7 @@
   <div class="right-panel">
     <!-- text box -->
     <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-      <textarea name="myTextBox" cols="104" rows="45">Enter some text...</textarea> <br>
+      <textarea name="myTextBox" cols="100" rows="45">Enter some text...</textarea> <br>
       <!--Text and space-->
     </form>
     <!--button-->
@@ -66,8 +87,12 @@
     <!--END button-->
     <!-- END text box-->
   </div>
+</div>
   <!--Javascript-->
   <script src="js/scripts.js"></script>
+  <!--Boostrap Javascript-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!--END Javascript-->
 </body>
 
