@@ -1,26 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CrowdSpeak - FAQ</title>
-  <meta name="description" content="CrowdSpeak">
-  <meta name="author" content="SitePoint">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CrowdSpeak - University of Rochester</title>
+
+  <!--CSS-->
   <link rel="stylesheet" href="css/stylesheet.css">
-  <!--Link to FavIcon-->
+  <!--Favicon-->
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <!--END Link to FavIcon-->
+  <!--Boostrap-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">CrowdSpeak</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">About<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="howitworks.html">How it Works</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <div class="container">
+    <h3>Right Aligned Navbar</h3>
+    <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+  </div>
 
+  <div class="left-panel">
+    <!-- you tube video -->
+    <iframe class="video" width="680" height="385" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
+    <!-- END you tube video -->
+    <!-- two buttons on the left -->
+    <button class="correct-button" type="button">Correct Mode</button>
+    <button class="comment-button" type="button">Comment Mode</button>
+    <!--END two buttons on the left -->
+    <!--"Default Comment" Wrapper/Text Box-->
+    <form>
+      <fieldset>
+        <legend><u>DEFAULT COMMENTS</u></legend>
+        <!-- radio buttons-->
 
+        <input type="radio" name="comments" value="unclear">
+        <label for="unclear" id="unclear-comment"> This section is unclear. </label><br>
+        <input type="radio" name="comments" value="wrong">
+        <label for="wrong" id="wrong-comment"> This word might be wrong. </label><br>
+        <input type="radio" name="comments" value="slowly">
+        <label for="slowly" id="slowly-comment"> You are speaking slowly here. </label><br>
+        <input type="radio" name="comments" value="quickly" class="quickly-comment">
+        <label for="quickly" id="quickly-comment">You are speaking quickly here. </label><br>
 
-
-
-
-
-  <!--Javascript Section-->
+        <!-- END radio buttons-->
+        <!--Custom Comment Section-->
+        <legend class="custom-comment"><u>CUSTOM COMMENT</u></legend>
+        <input class="special-radio" type="radio" name="comments" value="custom"> <textarea name="TextBox" cols="50" rows="5">This word is rather archaic... </textarea> <br><br>
+        <!--Text and space-->
+      </fieldset>
+    </form>
+    <!--END "Default Comment" Wrapper/Text Box-->
+  </div>
+  <!-- things on the right -->
+  <div class="right-panel">
+    <!-- text box -->
+    <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
+      <textarea name="myTextBox" cols="100" rows="45">Enter some text...</textarea> <br>
+      <!--Text and space-->
+    </form>
+    <!--button-->
+    <button class="submit-button" type="button" name="submit"><b>Submit</b></button>
+    <!--END button-->
+    <!-- END text box-->
+  </div>
+</div>
+  <!--Javascript-->
   <script src="js/scripts.js"></script>
-  <!--END Javascript Section-->
+  <!--Boostrap Javascript-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--END Javascript-->
 </body>
 </html>
