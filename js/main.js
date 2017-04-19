@@ -204,7 +204,7 @@ function download(){
       data.append('file', blob);
 
       $.ajax({
-        url :  "video.py",
+        url :  "upload.php",
         type: 'POST',
         data: data,
         contentType: false,
