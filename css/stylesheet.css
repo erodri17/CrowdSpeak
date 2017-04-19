@@ -95,17 +95,6 @@ fieldset {
 }
 
 
-/* "comment mode" deals with the positioning of the comment mode button*/
-
-.comment-button {
-  background-color: #9ACA41;
-  margin-left: 40px;
-}
-
-
-/* "correct-button" deals with the positioning of the correct mode button*/
-
-.correct-button {}
 
 
 /* contains the radio button for the CUSTOM COMMENT section */
@@ -233,8 +222,7 @@ button {
   padding-right: 70px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-radius: 15px/* make edges circular*/
-  border: 2px;
+  
   /* make edges a certain color and thickness */
   margin-top: 3px;
   /* shifts the top edge of the button 30 pixels up */

@@ -26,22 +26,20 @@
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.html">Home</a></li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">About<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="howitworks.html">How it Works</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-        </li>
+        <li><a href="howitworks.html">How it Works</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
     <!--Sign Up Section-->
     <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <!--END Sign Up Section-->
+
 
     <!--Login Section-->
-    <li><a href="index.html" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+    <li><a href="login.html" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
           <div class="loginmodal-container">
@@ -51,13 +49,11 @@
               <input type="password" name="pass" placeholder="Password">
               <input type="submit" name="login" class="login loginmodal-submit" value="Login">
             </form>
-            <div class="login-help">
-              <a href="signup.html">Sign Up</a> - <a href="#">Forgot Password</a>
-            </div>
           </div>
         </div>
       </div>
       <!--END Login Section  -->
+
       </ul>
       </div>
   </nav>
@@ -66,11 +62,11 @@
   <div class="container">
   <div class="left-panel">
     <!-- you tube video -->
-    <iframe class="video" width="680" height="385" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video" width="530" height="385" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
     <!-- END you tube video -->
     <!-- two buttons on the left -->
-    <button class="correct-button" type="button">Correct Mode</button>
-    <button class="comment-button" type="button">Comment Mode</button>
+    <button type="button" class="btn">Correct Mode</button>
+    <button type="button" class="btn-info">Comment Mode</button>
     <!--END two buttons on the left -->
     <!--"Default Comment" Wrapper/Text Box-->
     <form>
@@ -100,11 +96,11 @@
   <div class="right-panel">
     <!-- text box -->
     <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-      <textarea name="myTextBox" cols="100" rows="45">Enter some text...</textarea> <br>
+      <textarea name="myTextBox" cols="70" rows="45">Enter some text...</textarea> <br>
       <!--Text and space-->
     </form>
     <!--button-->
-    <button class="submit-button" type="button" name="submit"><b>Submit</b></button>
+    <button class="btn-success" type="button"><b>Submit</b></button>
     <!--END button-->
     <!-- END text box-->
   </div>
