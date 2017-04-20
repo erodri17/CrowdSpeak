@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>CrowdSpeak - University of Rochester</title>
+  <title>Sign Up - CrowdSpeak </title>
 
   <!--CSS-->
   <link rel="stylesheet" href="css/stylesheet.css">
@@ -15,67 +15,64 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">CrowdSpeak</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">About<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="howitworks.html">How it Works</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Help</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <div class="container">
-    <h3>Right Aligned Navbar</h3>
-    <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+  <!--Navigation-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">CrowdSpeak</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">About<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="howitworks.html">How it Works</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
 
+      <!--Sign Up Section-->
+      <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
 
-
-
-    <!--Login Section-->
-    <li><a href="index.html" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-      <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-          <div class="loginmodal-container">
-            <h1>Login to Your Account</h1><br>
-            <form>
-              <input type="text" name="user" placeholder="Username">
-              <input type="password" name="pass" placeholder="Password">
-              <input type="submit" name="login" class="login loginmodal-submit" value="Login">
-            </form>
-
-            <div class="login-help">
-              <a href="#">Register</a> - <a href="#">Forgot Password</a>
+      <!--Login Section-->
+      <li><a href="signup.html" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+            <div class="loginmodal-container">
+              <h1>Login to Your Account</h1><br>
+              <form>
+                <input type="text" name="user" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+              </form>
+              <div class="login-help">
+                <a href="signup.html">Sign Up</a> - <a href="#">Forgot Password</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--END Login Section  -->
+        <!--END Login Section  -->
+        </ul>
+        </div>
+    </nav>
+  <!--END Navigation-->
 
-
+  <!--Main Body-->
+  <div class="container">
 
       <!--Sign Up Section-->
         <div class="panel-heading">
           <div class="panel-title text-center">
-            <h1 class="title">CrowdSpeak</h1>
+            <h1 class="title">Sign</h1>
             <hr />
           </div>
         </div>
         <div class="main-login main-center">
-          <form class="form-horizontal" method="POST" action="/database.py">
+          <form class="form-horizontal" method="POST" action="cgi-bin/database.py">
             <!-- Name -->
             <div class="form-group">
               <label for="name" class="cols-sm-2 control-label">Your Name</label>
@@ -128,23 +125,21 @@
             </div>
             <!-- Register -->
             <div class="form-group ">
-              <button type="button" class="btn btn-primary btn-lg btn-block login-button" name="submit" id "submitButton">Register</button>
-            </div>
-            <div class="login-register">
-              <a href="index.php">Login</a>
+              <button type="submit" class="btn btn-primary btn-lg btn-block login-button" name="submit" id "submitButton">Register</button>
             </div>
           </form>
         </div>
-      </div>
-      </div>
+      </div><!--END Container-->
       <!--END Sign Up Section-->
 
 
+  <!--Footer-->
+      <footer class="container-fluid">
+      <p>Footer Text</p>
+      </footer>
+  <!--END Footer-->
 
 
-
-  </div>
-</div>
   <!--Javascript-->
   <!--Boostrap Javascript-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>

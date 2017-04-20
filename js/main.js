@@ -160,7 +160,7 @@ function play() {
   recordedVideo.src = window.URL.createObjectURL(superBuffer);
 }
 
-function download2() {
+function download() {
   var blob = new Blob(recordedBlobs, {type: 'video/webm'});
   var url = window.URL.createObjectURL(blob);
   var a = document.createElement('a');
@@ -177,7 +177,7 @@ function download2() {
 
   var blob2 = new Blob([final_transcript], {type: "text/plain;charset=utf-8"});
   var url2 = window.URL.createObjectURL(blob2);
-  var a2 = document.createElement('a2');
+  var a2 = document.createElement('a');
   a2.style.display = 'none';
   a2.href = url2;
   a2.download = 'textFile.txt';
@@ -192,7 +192,7 @@ function download2() {
 }
 
 
-function download(){
+function download2(){
 	
 	var blob = new Blob(recordedBlobs, {type: 'video/webm'});
 
@@ -210,10 +210,10 @@ function download(){
         contentType: false,
         processData: false,
         success: function(data) {
-          alert("YAY!");
+          alert("boa!");
         },    
         error: function() {
-          alert("FAIL!");
+          alert("not so boa!");
         }
       });
 	
