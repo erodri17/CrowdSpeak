@@ -17,8 +17,6 @@ def add_user(name, username, email, password):
 	c.execute('INSERT INTO users (name, username, email, password) VALUES (?, ?, ?, ?)', (name, username, email, password)
 	conn.comit()
 
-
-<<<<<<< HEAD
 	name = form_form['name'].value
 	username = form_form['username'].value
 	email = form_form['email'].value
@@ -35,7 +33,7 @@ def add_user(name, username, email, password):
 	elif len(data) == 0:
 
 		add_user(name, username, email, password)
-=======
+
 console.log('trying')
 
 name = form_form['name'].value
@@ -52,6 +50,4 @@ if str(password) != str(confirmPassword):
 	//ERROR
 		
 elif len(data) == 0:
-	
 	add_user(name, username, email, password)
->>>>>>> origin/Updated-Using-Bootstrap
