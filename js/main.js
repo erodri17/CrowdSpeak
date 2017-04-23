@@ -15,6 +15,8 @@
 /* globals MediaRecorder */
 
 
+var username; //THE USERNAME
+
 var mediaSource = new MediaSource();
 mediaSource.addEventListener('sourceopen', handleSourceOpen, false);
 var mediaRecorder;
@@ -217,12 +219,15 @@ function play() {
 }
 
 function download() {
+	
+  GetUsername();
+
   var blob = new Blob(recordedBlobs, {type: 'video/webm'});
   var url = window.URL.createObjectURL(blob);
   var a = document.createElement('a');
   a.style.display = 'none';
   a.href = url;
-  a.download = 'testFile.webm';
+  a.download = username + '.webm';
   document.body.appendChild(a);
   a.click();
   setTimeout(function() {
@@ -236,7 +241,7 @@ function download() {
   var a2 = document.createElement('a');
   a2.style.display = 'none';
   a2.href = url2;
-  a2.download = 'textFile.txt';
+  a2.download = username + 'Text.txt';
   document.body.appendChild(a2);
   a2.click();
   setTimeout(function() {
@@ -246,9 +251,6 @@ function download() {
   
   
 }
- 
-
-
 
 var two_line = /\n\n/g;
 var one_line = /\n/g;
@@ -259,4 +261,10 @@ function linebreak(s) {
 var first_char = /\S/;
 function capitalize(s) {
   return s.replace(first_char, function(m) { return m.toUpperCase(); });
+}
+
+function GetUsername() {
+	var allcookies = document.cookie = document.cookie;
+	var cookiearray = allcookies.split(';');
+	username = cookiearray[0].split('=')[1];
 }

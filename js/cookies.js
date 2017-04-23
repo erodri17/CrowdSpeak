@@ -9,6 +9,7 @@
  */
 
 
+var cookiearray;
 
 function WriteCookie() {
 	console.log("Start Cookies");
@@ -21,6 +22,20 @@ function WriteCookie() {
 	document.cookie = "email=" + emailC;
 
 	console.log("Made Cookie");
+	ShowCookie();
+}
+
+
+function ShowCookie() {
+	var allcookies = document.cookie = document.cookie;
+	
+	cookiearray = allcookies.split(';');
+	
+	for(var i = 0; i < cookiearray.length; i++){
+		name = cookiearray[i].split('=')[0];
+		value = cookiearray[i].split('=')[1];
+		console.log("Key is:" + name + " and Value is:" + value);
+	}
 }
 
 
