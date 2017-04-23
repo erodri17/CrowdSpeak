@@ -19,7 +19,11 @@ body {
   /* elements added to create a responsive website */
   padding:0;
   margin: 0;
+<<<<<<< HEAD
 
+=======
+  background-color: red;
+>>>>>>> master
 }
 
 p {}

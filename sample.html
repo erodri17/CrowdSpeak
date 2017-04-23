@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -147,3 +148,154 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Crowd - CrowdSpeak </title>
+
+  <!--CSS-->
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!--Boostrap-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--Navigation-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">CrowdSpeak</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="howitworks.html">How it Works</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+    <!--Sign Up Section-->
+    <li><a href="signup.html">Sign Up</a></li>
+    <!--END Sign Up Section-->
+
+
+    <!--Login Section-->
+    <li><a href="login.html" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+          <div class="loginmodal-container">
+            <h1>Login to Your Account</h1><br>
+            <form>
+              <input type="text" name="user" placeholder="Username">
+              <input type="password" name="pass" placeholder="Password">
+              <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--END Login Section  -->
+
+      </ul>
+      </div>
+  </nav>
+<!--END Navigation-->
+
+  <div class="container">
+  <div class="left-panel">
+    <!-- you tube video
+    <iframe class="video" width="530" height="385" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
+    END you tube video -->
+	<video id="sampleVideo" src="video\v1\testFile.webm" width="530" height="385" controls>
+	</video>
+    <!-- two buttons on the left -->
+    <button type="button" class="btn">Correct Mode</button>
+    <button type="button" class="btn-info">Comment Mode</button>
+    <!--END two buttons on the left -->
+    <!--"Default Comment" Wrapper/Text Box-->
+    <form>
+      <fieldset>
+        <legend><u>DEFAULT COMMENTS</u></legend>
+        <!-- radio buttons-->
+
+        <input type="radio" name="comments" value="This section is unclear." id="unclear">
+        <label for="unclear" id="unclear-comment"> This section is unclear. </label><br>
+        <input type="radio" name="comments" value="This word might be wrong.">
+        <label for="wrong" id="wrong-comment" id="wrong"> This word might be wrong. </label><br>
+        <input type="radio" name="comments" value="You are speaking slowly here.">
+        <label for="slowly" id="slowly-comment" id="slow"> You are speaking slowly here. </label><br>
+        <input type="radio" name="comments" value="You are speaking quickly here." class="quickly-comment">
+        <label for="quickly" id="quickly-comment" id="quick">You are speaking quickly here. </label><br>
+
+        <!-- END radio buttons-->
+        <!--Custom Comment Section-->
+        <legend class="custom-comment"><u>CUSTOM COMMENT</u></legend>
+        <input class="special-radio" type="radio" name="comments" value="custom"> <textarea name="TextBox" cols="50" rows="5">This word is rather archaic... </textarea> <br><br>
+        <!--Text and space-->
+      </fieldset>
+    </form>
+    <!--END "Default Comment" Wrapper/Text Box-->
+  </div>
+  <!-- things on the right -->
+  <div class="right-panel">
+    <!-- text box -->
+    <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
+      <textarea name="myTextBox" id="trans" cols="70" rows="37">Ticking away the moments they make up a dull day you Fritter and waste the hours in an offhand way kicking around on a piece of ground in your hometown waiting for someone or something to show you the way tired of lying in the sunshine staying home to watch the  rain you are young and life is long and there is time to kill today and then one day you find ten years and got behind you no one told you when to run you missed the starting gun</textarea> <br>
+      <!--Text and space-->
+    </form>
+    <!--button-->
+    <button class="btn-success" type="button" onclick="myFun()"><b>Submit</b></button>
+    <!--END button-->
+    <!-- END text box-->
+  </div>
+  </div>
+
+
+
+
+  <!--Footer-->
+  <footer class="container-fluid">
+  <p>Footer Text</p>
+  </footer>
+  <!--END Footer-->
+
+  <!--Javascript-->
+  <script>
+  var video = document.getElementById("sampleVideo");
+  
+	function myFun() {
+		var options = document.getElementsByName("comments");
+		for (var i = 0; i < options.length; i++) {
+			if (options[i].checked) {
+				var calc = options[i].value;
+			}
+		}
+		var text = document.getElementById("trans").value;
+		window.alert("Thanks for the edit!\n" + calc + "\n" + text);
+		document.getElementById("trans").value = "United forever in friendship and labor are Mighty republics will ever endure the great Soviet Union will listen Asian a dream of a people that Fortress secure long live our Soviet motherland built by the people like you have long live our people United in 3";
+		
+		
+		video.pause();
+		video.setAttribute('src', 'http://localhost:8000/CrowdSpeak-Updated-Using-Bootstrap/video/v3/testFile.webm');
+		video.load();
+
+	}
+  
+  </script>
+  <!--Boostrap Javascript-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--END Javascript-->
+</body>
+
+</html>
+>>>>>>> master
