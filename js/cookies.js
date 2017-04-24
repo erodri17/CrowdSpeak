@@ -25,7 +25,8 @@ function WriteCookie() {
 		document.cookie = "username=" + usernameC;
 		document.cookie = "name=" + nameC;
 		document.cookie = "email=" + emailC;
-		document.cookie = "video=";
+		//document.cookie = "video=";
+		alert(usernameC + " is signed up");
 		console.log("Made Cookie");
 		ShowCookie();
 	}

@@ -30,6 +30,7 @@
 	<div class="well">
 	<div><b>User Info</b></div>
 	<div id="username">GetUsername</div>
+	<div id="moreInfo"></div>
 	</div>
 	
 	<div class="spaces">
@@ -51,7 +52,7 @@
           <li class="list-group-item"><button type="button" onclick="openFeedback()">First Video</button></li>
           <li class="list-group-item"><button type="button">Second Video</button></li>
           <li class="list-group-item"><button type="button">Third Video</button></li>
-          <li class="list-group-item"><button type="button">Fourth Video</button></li>
+          <li class="list-group-item"><button type="button" onclick="createNew()">Create Video</button></li>
         </ul>
 	</div>
 
@@ -63,6 +64,7 @@
 <script>
 	var user = GetUsername();
 	document.getElementById("username").innerHTML = user;
+	getCookieBits();
 
 	function GetUsername() {
 		var allcookies = document.cookie;
@@ -72,9 +74,27 @@
 	    return username;
 	}
 	
-	function openFeedback() {
-		window.open( user + 'feedback.html');
+	function getCookieBits() {
+	var str = "";
+	var allcookies = document.cookie;
 	
+	cookiearray = allcookies.split(';');
+	
+	for(var i = 1; i < cookiearray.length; i++){
+		name = cookiearray[i].split('=')[0];
+		value = cookiearray[i].split('=')[1];
+		str = str + "<br>" + name + " is " + value;
+	}
+	
+	document.getElementById("moreInfo").innerHTML = str;
+	}
+	
+	function openFeedback() {
+		window.open(user + 'feedback.html');
+	}
+	
+	function createNew() {
+		window.open('create.html');
 	}
 </script>
 </html>
