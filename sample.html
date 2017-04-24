@@ -108,8 +108,6 @@
   </div>
 
 
-
-
   <!--Footer-->
   <footer class="container-fluid">
   <p>Footer Text</p>
@@ -121,10 +119,28 @@
   var video = document.getElementById("sampleVideo");
   var startTran = document.getElementById("trans").value;
   
-  var read = new XMLHttpRequest();
-  read.open('GET', 'video\\v1\\ravitest.txt', false);
-  read.send();
-  console.log(read.responseText);
+  loadPage();
+  
+  //var read = new XMLHttpRequest();
+  //read.open('GET', 'video\\v1\\ravitest.txt', false);
+  //read.send();
+  //console.log(read.responseText);
+  
+	function loadPage(){
+	
+		var user = random();
+		user = "raviUser1";
+		
+		var videoFilename = 'files\\' + user + '.webm';
+		video.setAttribute('src', videoFilename);
+		video.load();
+		
+		var read = new XMLHttpRequest();
+		read.open('GET', 'files\\' + user + 'Text.txt' , false);
+		read.send();
+	
+	}
+  
   
 	function myFun() {
 		var options = document.getElementsByName("comments");
@@ -161,7 +177,7 @@
 	}
 	  
 	  function random() {
-		  var videoArray = ["user1", "user2"];
+		  var videoArray = ["raviUser1", "user2"];
 		  var result = videoArray[Math.floor(Math.random()*items.length)];
 		  return result;
 	  }
