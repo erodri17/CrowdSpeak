@@ -39,7 +39,7 @@
 
 
     <!--Login Section-->
-    <li><a href="login.html" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <li><a href="login.html" data-toggle="modal" data-target="#login-modal">Login</a></li>
       <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
           <div class="loginmodal-container">
@@ -97,7 +97,7 @@
   <div class="right-panel">
     <!-- text box -->
     <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-      <textarea name="myTextBox" id="trans" cols="70" rows="37">Ticking away the moments they make up a dull day you Fritter and waste the hours in an offhand way kicking around on a piece of ground in your hometown waiting for someone or something to show you the way tired of lying in the sunshine staying home to watch the  rain you are young and life is long and there is time to kill today and then one day you find ten years and got behind you no one told you when to run you missed the starting gun</textarea> <br>
+      <textarea name="myTextBox" id="trans" cols="70" rows="37">Text goes here</textarea> <br>
       <!--Text and space-->
     </form>
     <!--button-->
@@ -117,27 +117,29 @@
   <!--Javascript-->
   <script>
   var video = document.getElementById("sampleVideo");
-  var startTran = document.getElementById("trans").value;
+  var startTran;
+  var user;
   
   loadPage();
   
-  //var read = new XMLHttpRequest();
-  //read.open('GET', 'video\\v1\\ravitest.txt', false);
-  //read.send();
-  //console.log(read.responseText);
-  
 	function loadPage(){
 	
-		var user = random();
-		user = "raviUser1";
+		user = random();
+		console.log(user);
+		//user = "raviUser1";
 		
 		var videoFilename = 'files\\' + user + '.webm';
+		console.log(videoFilename);
 		video.setAttribute('src', videoFilename);
 		video.load();
 		
 		var read = new XMLHttpRequest();
-		read.open('GET', 'files\\' + user + 'Text.txt' , false);
+		var textName = 'files\\' + user + 'Text.txt';
+		read.open('GET', textName , false);
 		read.send();
+		console.log(read.responseText);
+		startTran = read.responseText;
+		document.getElementById("trans").value = read.responseText;
 	
 	}
 	
@@ -166,7 +168,7 @@
 		var start = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>USER FEEDBACK</title><link rel="stylesheet" href="css/stylesheet.css">';
 		var start2 = '<link rel="icon" type="image/png" href="images/favicon.png"><link href="css/bootstrap.min.css" rel="stylesheet"></head><body><nav class="navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><a class="navbar-brand" href="index.html">CrowdSpeak</a></div><ul class="nav navbar-nav"><li class="active"><a href="index.html">Home</a></li><li><a href="howitworks.html">How it Works</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="faq.html">FAQ</a></li><li><a href="help.html">Help</a></li></ul></div></nav><div class="container"><div class="left-panel">';
 		var video = '<video id="sampleVideo" src="' + currentVideo + '" width="530" height="385" controls></video>';
-		var part2 = '</div><div class="list-group"><div class="well"><p><b>Feedback</b></p></div></div><div class="right-panel"><div class = "well"><div>Original Transcript</div><div>';
+		var part2 = '</div><div class="list-group"><div class="well"><p><b>Feedback</b></p></div></div></div><div class="right-panel"><div class = "well"><div><b>Original Transcript</b></div><div>';
 		//before text
 		var part3 = '<div class="spaces"><p></p></div></div></div><div class = "well"><div><b>Edited Transcript</b></div><div>';
 		var currentTRAN = document.getElementById("trans").value;
@@ -177,7 +179,7 @@
 	}
 	  
 	  function random() {
-		  var videoArray = ["raviUser1", "user2"];
+		  var videoArray = ["raviUser1", "user2", "user3"];
 		  var result = videoArray[Math.floor(Math.random()*videoArray.length)];
 		  return result;
 	  }
