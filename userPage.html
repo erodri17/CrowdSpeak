@@ -29,7 +29,7 @@
 	  
 	<div class="well">
 	<div><b>User Info</b></div>
-	<div>GetUsername();</div>
+	<div id="username">GetUsername</div>
 	</div>
 	
 	<div class="spaces">
@@ -48,7 +48,7 @@
 		<div class="well">
 			<p><b>Your Videos</b></p>
 			<ul class="comments">
-          <li class="list-group-item"><button type="button" href="#feedbackSample">First Video</button></li>
+          <li class="list-group-item"><button type="button" onclick="openFeedback()">First Video</button></li>
           <li class="list-group-item"><button type="button">Second Video</button></li>
           <li class="list-group-item"><button type="button">Third Video</button></li>
           <li class="list-group-item"><button type="button">Fourth Video</button></li>
@@ -61,10 +61,20 @@
 </body>
 
 <script>
+	var user = GetUsername();
+	document.getElementById("username").innerHTML = user;
+
 	function GetUsername() {
-		var allcookies = document.cookie = document.cookie;
+		var allcookies = document.cookie;
 		var cookiearray = allcookies.split(';');
-		username = cookiearray[0].split('=')[1];
+		var username = cookiearray[0].split('=')[1];
+		console.log("Username = " + username);
+	    return username;
+	}
+	
+	function openFeedback() {
+		window.open( user + 'feedback.html');
+	
 	}
 </script>
 </html>

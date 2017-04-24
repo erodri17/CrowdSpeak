@@ -32,7 +32,7 @@ function WriteCookie() {
 }
 
 function ShowCookie() {
-	var allcookies = document.cookie = document.cookie;
+	var allcookies = document.cookie;
 	
 	cookiearray = allcookies.split(';');
 	

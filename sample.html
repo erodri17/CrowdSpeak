@@ -64,7 +64,7 @@
     <!-- you tube video
     <iframe class="video" width="530" height="385" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
     END you tube video -->
-	<video id="sampleVideo" src="video\v1\testFile.webm" width="530" height="385" controls></video>
+	<video id="sampleVideo" src="files\testFile.webm" width="530" height="385" controls></video>
     <!-- two buttons on the left -->
     <button type="button" class="btn">Correct Mode</button>
     <button type="button" class="btn-info">Comment Mode</button>
@@ -119,6 +119,7 @@
   var video = document.getElementById("sampleVideo");
   var startTran;
   var user;
+  var videoFilename;
   
   loadPage();
   
@@ -128,7 +129,7 @@
 		console.log(user);
 		//user = "raviUser1";
 		
-		var videoFilename = 'files\\' + user + '.webm';
+		videoFilename = 'files\\' + user + '.webm';
 		console.log(videoFilename);
 		video.setAttribute('src', videoFilename);
 		video.load();
@@ -163,12 +164,11 @@
 	}
 	
 	function createHTML() {
-		var currentVideo = 'video\\v1\\testFile.webm'; //This will get from somewhere
 		
 		var start = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>USER FEEDBACK</title><link rel="stylesheet" href="css/stylesheet.css">';
 		var start2 = '<link rel="icon" type="image/png" href="images/favicon.png"><link href="css/bootstrap.min.css" rel="stylesheet"></head><body><nav class="navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><a class="navbar-brand" href="index.html">CrowdSpeak</a></div><ul class="nav navbar-nav"><li class="active"><a href="index.html">Home</a></li><li><a href="howitworks.html">How it Works</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="faq.html">FAQ</a></li><li><a href="help.html">Help</a></li></ul></div></nav><div class="container"><div class="left-panel">';
-		var video = '<video id="sampleVideo" src="' + currentVideo + '" width="530" height="385" controls></video>';
-		var part2 = '</div><div class="list-group"><div class="well"><p><b>Feedback</b></p></div></div></div><div class="right-panel"><div class = "well"><div><b>Original Transcript</b></div><div>';
+		var video = '<video id="sampleVideo" src="' + videoFilename + '" width="530" height="385" controls></video>';
+		var part2 = '<div class="list-group"><div class="well"><p><b>Feedback</b></p></div></div></div><div class="right-panel"><div class = "well"><div><b>Original Transcript</b></div><div>';
 		//before text
 		var part3 = '<div class="spaces"><p></p></div></div></div><div class = "well"><div><b>Edited Transcript</b></div><div>';
 		var currentTRAN = document.getElementById("trans").value;
@@ -188,7 +188,7 @@
 		var blob = new Blob([fileHTML], {type: 'text/html'});
 		var a = document.createElement("a");
 		a.href = URL.createObjectURL(blob);
-		a.download = "feedback.html";
+		a.download = user + "feedback.html";
 		//a.hidden = true;
 		document.body.appendChild(a);
 		a.click();
