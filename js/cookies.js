@@ -1,5 +1,5 @@
 /**
- * @Author: Elmer Rodriguez <elmerxavierrodriguez>
+ * @Author: CrowdSpeak
  * @Date:   04-23-2017 <05:15:33 PM>
  * @Email:  elmer.rodriguez6@gmail.com
  * @Filename: cookies.js
