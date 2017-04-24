@@ -11,3 +11,6 @@ Goal: Make auto transcriptions algorithms better using crowdsourced user input. 
 Team: Charlotte Wright, Kalila Shapiro, Matthew Hoke, Ravi Jain, Elmer Rodriguez
 
 Mentor: Raina
+
+
+We great
