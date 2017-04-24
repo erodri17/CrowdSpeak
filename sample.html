@@ -158,6 +158,12 @@
 		saveHTMLFile(start + video + part2 + startTran + part3 + currentTRAN + end);
 	
 	}
+	  
+	  function random() {
+		  var videoArray = ["user1", "user2"];
+		  var result = videoArray[Math.floor(Math.random()*items.length)];
+		  return result;
+	  }
 	
 	function saveHTMLFile(fileHTML){
 		var blob = new Blob([fileHTML], {type: 'text/html'});

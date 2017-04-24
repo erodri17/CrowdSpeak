@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>USER FEEDBACK</title>
+  <title>USER PAGE</title>
   <!--CSS-->
-  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/UserStylesheet.css">
   <!--Favicon-->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <!--Boostrap-->
@@ -24,44 +24,47 @@
 	  </div>
   </nav>
 
-  <div class="container">
+  <article>
   <div class="left-panel">
-    <!-- you tube video -->
-    <iframe class="video" width="530" height="385" src="https://www.youtube.com/embed/uBBDMqZKagY" frameborder="0" allowfullscreen></iframe>
-    <!-- END you tube video -->
-	<div class="list-group">
-		<div class="well">
-			<p><b>Feedback</b></p>
-			<p>This user thought you had issues with:</p>
-			<ul class="comments">
-          <li class="list-group-item">Comment One</li>
-          <li class="list-group-item">Comment Two</li>
-          <li class="list-group-item">Comment Three</li>
-          <li class="list-group-item">Comment Four</li>
-        </ul>
-	</div>
-	</div>
-	</div>
-	
-	
-	<div class="right-panel">
-	
+	  
 	<div class="well">
-	<div><b>Original Transcript</b></div>
-	<div>TRANSCRIPT ONE</div>
+	<div><b>User Info</b></div>
+	<div>GetUsername();</div>
 	</div>
 	
 	<div class="spaces">
 		<p> </p>
 	</div>
-	
-	<div class="well">
-	<div><b>Edited Transcript</b></div>
-	<div>TRANSCRIPT Edit</div>
+		
+	</div>
+	</article>
 	</div>
 	
-	</div>
+	
+	<aside>
+	<div class="right-panel">
+	
+	<div class="list-group">
+		<div class="well">
+			<p><b>Your Videos</b></p>
+			<ul class="comments">
+          <li class="list-group-item"><button type="button" href="#feedbackSample">First Video</button></li>
+          <li class="list-group-item"><button type="button">Second Video</button></li>
+          <li class="list-group-item"><button type="button">Third Video</button></li>
+          <li class="list-group-item"><button type="button">Fourth Video</button></li>
+        </ul>
 	</div>
 
+	</div>
+	</aside>
+
 </body>
+
+<script>
+	function GetUsername() {
+		var allcookies = document.cookie = document.cookie;
+		var cookiearray = allcookies.split(';');
+		username = cookiearray[0].split('=')[1];
+	}
+</script>
 </html>
