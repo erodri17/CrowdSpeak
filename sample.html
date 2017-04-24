@@ -73,21 +73,23 @@
     <form>
       <fieldset>
         <legend><u>DEFAULT COMMENTS</u></legend>
-        <!-- radio buttons-->
+        <!-- checkbox buttons-->
 
-        <input type="radio" name="comments" value="This section is unclear." id="unclear">
+        <input type="checkbox" name="comments" value="This section is unclear." id="unclear">
         <label for="unclear" id="unclear-comment"> This section is unclear. </label><br>
-        <input type="radio" name="comments" value="This word might be wrong.">
-        <label for="wrong" id="wrong-comment" id="wrong"> This word might be wrong. </label><br>
-        <input type="radio" name="comments" value="You are speaking slowly here.">
+        <input type="checkbox" name="comments" value="This word choice might be wrong.">
+        <label for="wrong" id="wrong-comment" id="wrong"> This word choice might be wrong. </label><br>
+		<input type="checkbox" name="comments" value="Need to improve body language.">
+        <label for="body" id="body-comment" id="body"> Need to improve body language. </label><br>
+        <input type="checkbox" name="comments" value="You are speaking slowly here.">
         <label for="slowly" id="slowly-comment" id="slow"> You are speaking slowly here. </label><br>
-        <input type="radio" name="comments" value="You are speaking quickly here." class="quickly-comment">
+        <input type="checkbox" name="comments" value="You are speaking quickly here." class="quickly-comment">
         <label for="quickly" id="quickly-comment" id="quick">You are speaking quickly here. </label><br>
 
-        <!-- END radio buttons-->
+        <!-- END checkbox buttons-->
         <!--Custom Comment Section-->
         <legend class="custom-comment"><u>CUSTOM COMMENT</u></legend>
-        <input class="special-radio" type="radio" name="comments" value="custom"> <textarea name="TextBox" cols="50" rows="5">This word is rather archaic... </textarea> <br><br>
+        <input class="special-checkbox" type="checkbox" name="comments" value="custom"> <textarea name="TextBox" cols="50" rows="5" id="cComment"></textarea> <br><br>
         <!--Text and space-->
       </fieldset>
     </form>
@@ -149,7 +151,7 @@
 		var options = document.getElementsByName("comments");
 		for (var i = 0; i < options.length; i++) {
 			if (options[i].checked) {
-				var calc = options[i].value;
+				var calc = calc + options[i].value;
 			}
 		}
 		var text = document.getElementById("trans").value;
@@ -164,11 +166,16 @@
 	}
 	
 	function createHTML() {
-	
+		var comment = '';
 		var options = document.getElementsByName("comments");
 		for (var i = 0; i < options.length; i++) {
 			if (options[i].checked) {
-				var comment = options[i].value;
+				if(options[i].value == 'custom'){
+					comment = comment + '<li class="list-group-item">' + document.getElementById("cComment").value + '</li>';
+				}
+				else {
+					comment = comment + '<li class="list-group-item">' +  options[i].value + '</li>';
+				}
 			}
 		}
 		
@@ -176,7 +183,7 @@
 		var start2 = '<link rel="icon" type="image/png" href="images/favicon.png"><link href="css/bootstrap.min.css" rel="stylesheet"></head><body><nav class="navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><a class="navbar-brand" href="index.html">CrowdSpeak</a></div><ul class="nav navbar-nav"><li class="active"><a href="index.html">Home</a></li><li><a href="howitworks.html">How it Works</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="faq.html">FAQ</a></li><li><a href="help.html">Help</a></li></ul></div></nav><div class="container"><div class="left-panel">';
 		var video = '<video id="sampleVideo" src="' + videoFilename + '" width="530" height="385" controls></video>';
 		var part2 = '<div class="list-group"><div class="well"><p><b>Feedback</b></p>'
-		var feedback = '<ul class="comments"><li class="list-group-item">' + comment + '</li></ul>';
+		var feedback = '<ul class="comments">' + comment + '</ul>';
 		var part3 = '</div></div></div><div class="right-panel"><div class = "well"><div><b>Original Transcript</b></div><div>';
 		//before text
 		var part4 = '<div class="spaces"><p></p></div></div></div><div class = "well"><div><b>Edited Transcript</b></div><div>';
