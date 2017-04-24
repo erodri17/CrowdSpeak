@@ -120,7 +120,7 @@
   <script>
   var video = document.getElementById("sampleVideo");
   var startTran = document.getElementById("trans").value;
-  
+  random();
   var read = new XMLHttpRequest();
   read.open('GET', 'video\\v1\\ravitest.txt', false);
   read.send();
@@ -161,7 +161,7 @@
 	  
 	  function random() {
 		  var videoArray = ["user1", "user2"];
-		  var result = videoArray[Math.floor(Math.random()*items.length)];
+		  var result = videoArray[Math.floor(Math.random()*videoArray.length)];
 		  return result;
 	  }
 	
