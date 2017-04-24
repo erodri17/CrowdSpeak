@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USER PAGE</title>
+  <!--CSS-->
+  <link rel="stylesheet" href="css/UserStylesheet.css">
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!--Boostrap-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">CrowdSpeak</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="howitworks.html">How it Works</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+	  </div>
+  </nav>
+
+  <article>
+  <div class="left-panel">
+	  
+	<div class="well">
+	<div><b>User Info</b></div>
+	<div>GetUsername();</div>
+	</div>
+	
+	<div class="spaces">
+		<p> </p>
+	</div>
+		
+	</div>
+	</article>
+	</div>
+	
+	
+	<aside>
+	<div class="right-panel">
+	
+	<div class="list-group">
+		<div class="well">
+			<p><b>Your Videos</b></p>
+			<ul class="comments">
+          <li class="list-group-item"><button type="button" href="#feedbackSample">First Video</button></li>
+          <li class="list-group-item"><button type="button">Second Video</button></li>
+          <li class="list-group-item"><button type="button">Third Video</button></li>
+          <li class="list-group-item"><button type="button">Fourth Video</button></li>
+        </ul>
+	</div>
+
+	</div>
+	</aside>
+
+</body>
+
+<script>
+	function GetUsername() {
+		var allcookies = document.cookie = document.cookie;
+		var cookiearray = allcookies.split(';');
+		username = cookiearray[0].split('=')[1];
+	}
+</script>
+</html>
