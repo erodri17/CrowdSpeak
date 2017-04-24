@@ -1,0 +1,330 @@
+body {
+  /* elements added to create a responsive website */
+  padding:0;
+  margin: 0;
+  background-color: red;
+}
+
+p {}
+	
+
+
+/* DEFAULT COMMENTS block*/
+
+
+fieldset {
+  padding-bottom: 0px;
+  font-size: 15px;
+}
+
+.right-panel, .left-panel {
+	display: inline-block;
+}
+
+
+
+/* navigation bar basic attributes */
+
+.navigation-bar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Set black background color, white text and some padding */
+ footer {
+   background-color: #555;
+   color: white;
+   padding: 15px;
+ }
+
+ nav{
+   background-color: red;
+ }
+
+
+
+/************************/
+/* END - SECTION - BASE */
+/************************/
+
+
+/*******************/
+/* SECTION: Layout */
+/*******************/
+
+
+/* HERE WE MANIPULATE EVERYTHING RELATED WITH POSITIONING OF MAJOR COMPONENTS IN THE WEBSITE*/
+
+
+/* class used for layout of the left side of the webpage */
+
+.left-panel {
+  float: left;
+  width: 45%;
+  margin-left: 60px;
+  padding-top: 3px;
+}
+
+
+/* class used for layout of the right side of the webpage */
+
+.right-panel {
+  float: right;
+  width: 45%;
+  margin-right: 60px;
+  padding-top: 3px;
+}
+
+/* deals with the positioning of the submit button*/
+
+
+
+/* deals with the positioning of the custom comment section*/
+
+.custom-comment {
+  margin-top: 5px;
+  margin-bottom: 7px;
+  font-size: 15;
+}
+
+
+
+
+/* contains the radio button for the CUSTOM COMMENT section */
+
+.special-radio {
+  float: left; /* makes the button stay in the upper left side of the box*/
+}
+
+
+/* deals with the positioning of the navigation bar in the website */
+
+.navigation-bar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
+}
+
+.help-button{
+float: right;
+margin-left: 700px;
+background-color: grey;
+
+}
+/**************************/
+/* END - SECTION - LAYOUT */
+/**************************/
+
+
+/********************/
+/* SECTION - MODULE */
+/********************/
+
+
+/* HERE WE ADD ALL THE CHANGES MADE TO INDIVIDUAL COMPONENTS OF THE WEBSITE*/
+
+
+/* section to manipulate the you tube video*/
+
+.video {}
+
+
+/* spacing the radio buttons from each other*/
+
+input[type="radio"] {
+  margin: 10 10px 0 10px;
+}
+
+
+/* changes the color of the individual labels in the "DEFAULT COMMENTS" section */
+
+#unclear-comment {
+  /*text-color must be #CBCA43 */
+  color: #CBCA43;
+  font-size: 18px;
+}
+
+#wrong-comment {
+  /*text-color must be #FC371D */
+  color: #FC371D;
+  font-size: 18px;
+}
+
+#slowly-comment {
+  /*text-color must be #0D40FB */
+  color: #0D40FB;
+  font-size: 18px;
+}
+
+#quickly-comment {
+  /*text-color must be #FD9828*/
+  color: #FD9828;
+  font-size: 18px;
+}
+
+
+/*deals with the individual elements in the navigation bar*/
+
+.navigation-bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navigation-bar a.active {
+  background-color: #9ACA41;
+  color: white;
+}
+
+
+/**************************/
+/* END - SECTION - MODULE */
+/**************************/
+
+
+/*******************/
+/* SECTION - STATE */
+/*******************/
+
+
+/* Usually Javascript goes here */
+
+
+/*************************/
+/* END - SECTION - STATE */
+/*************************/
+
+
+/*******************/
+/* SECTION - THEME */
+/*******************/
+
+
+/* HERE WE ADD STYLES/CHANGES TO MAINTAIN A THEME AND/OR CONSISTENCY THROUGHOUT THE WEBSITE*/
+
+
+/* contains the general characteristics of ALL the buttons */
+
+button {
+  font-size: 18px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  /* make edges a certain color and thickness */
+  margin-top: 3px;
+  /* shifts the top edge of the button 30 pixels up */
+  margin-bottom: 5px;
+  /* shifts the bottom edge of the button 30 down*/
+}
+
+
+/*************************/
+/* END - SECTION - THEME */
+/*************************/
+
+
+/*************************/
+/*     Login Form        */
+/*************************/
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-help{
+  font-size: 12px;
+}
