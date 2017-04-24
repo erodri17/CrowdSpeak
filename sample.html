@@ -121,6 +121,11 @@
   var video = document.getElementById("sampleVideo");
   var startTran = document.getElementById("trans").value;
   
+  var read = new XMLHttpRequest();
+  read.open('GET', 'video\\v1\\ravitest.txt', false);
+  read.send();
+  console.log(read.responseText);
+  
 	function myFun() {
 		var options = document.getElementsByName("comments");
 		for (var i = 0; i < options.length; i++) {

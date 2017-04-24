@@ -227,6 +227,7 @@ function download() {
   var a = document.createElement('a');
   a.style.display = 'none';
   a.href = url;
+  document.cookie = "video=" + username + ".webm";
   a.download = username + '.webm';
   document.body.appendChild(a);
   a.click();
