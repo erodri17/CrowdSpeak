@@ -19,6 +19,7 @@ function WriteCookie() {
 	document.cookie = "username=" + usernameC;
 	document.cookie = "name=" + nameC;
 	document.cookie = "email=" + emailC;
+	document.cookie = "video=";
 	console.log("Made Cookie");
 		if (document.getElementById("fullname").value = "") {
 		alert("Enter your name to continue.");
