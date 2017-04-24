@@ -19,19 +19,13 @@ function WriteCookie() {
 	
 	if (document.getElementById("username").value == "") {
 		alert("Username is blank!!!!!!!!!!!!!!!!!");
-	document.cookie = "username=" + usernameC;
-	document.cookie = "name=" + nameC;
-	document.cookie = "email=" + emailC;
-	document.cookie = "video=";
-	console.log("Made Cookie");
-		if (document.getElementById("fullname").value = "") {
-		alert("Enter your name to continue.");
 		return;
 	}
 	else {
 		document.cookie = "username=" + usernameC;
 		document.cookie = "name=" + nameC;
 		document.cookie = "email=" + emailC;
+		document.cookie = "video=";
 		console.log("Made Cookie");
 		ShowCookie();
 	}
