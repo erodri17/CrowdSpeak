@@ -119,6 +119,7 @@
   <!--Javascript-->
   <script>
   var video = document.getElementById("sampleVideo");
+  var startTran = document.getElementById("trans").value;
   
 	function myFun() {
 		var options = document.getElementsByName("comments");
@@ -149,7 +150,7 @@
 		var currentTRAN = document.getElementById("trans").value;
 		var end = '</div></div></div></body></html>';
 		
-		saveHTMLFile(start + video + part2 + "STARTTTT" + part3 + currentTRAN + end);
+		saveHTMLFile(start + video + part2 + startTran + part3 + currentTRAN + end);
 	
 	}
 	
@@ -157,7 +158,7 @@
 		var blob = new Blob([fileHTML], {type: 'text/html'});
 		var a = document.createElement("a");
 		a.href = URL.createObjectURL(blob);
-		a.download = "feedback1111.html";
+		a.download = "feedback.html";
 		//a.hidden = true;
 		document.body.appendChild(a);
 		a.click();
