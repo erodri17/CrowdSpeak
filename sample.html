@@ -120,12 +120,12 @@
   <script>
   var video = document.getElementById("sampleVideo");
   var startTran = document.getElementById("trans").value;
-  random();
+  random();2
   var read = new XMLHttpRequest();
   read.open('GET', 'video\\v1\\ravitest.txt', false);
   read.send();
   console.log(read.responseText);
-  
+
 	function myFun() {
 		var options = document.getElementsByName("comments");
 		for (var i = 0; i < options.length; i++) {
@@ -136,17 +136,17 @@
 		var text = document.getElementById("trans").value;
 		window.alert("Thanks for the edit!\n" + calc + "\n" + text);
 		document.getElementById("trans").value = "United forever in friendship and labor are Mighty republics will ever endure the great Soviet Union will listen Asian a dream of a people that Fortress secure long live our Soviet motherland built by the people like you have long live our people United in 3";
-		
-		
+
+
 		video.pause();
 		video.setAttribute('src', 'http://localhost:8000/CrowdSpeak-Updated-Using-Bootstrap/video/v3/testFile.webm');
 		video.load();
 
 	}
-	
+
 	function createHTML() {
 		var currentVideo = 'video\\v1\\testFile.webm'; //This will get from somewhere
-		
+
 		var start = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>USER FEEDBACK</title><link rel="stylesheet" href="css/stylesheet.css"><link rel="icon" type="image/png" href="images/favicon.png"><link href="css/bootstrap.min.css" rel="stylesheet"></head><body><nav class="navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><a class="navbar-brand" href="index.html">CrowdSpeak</a></div><ul class="nav navbar-nav"><li class="active"><a href="index.html">Home</a></li><li><a href="howitworks.html">How it Works</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="faq.html">FAQ</a></li><li><a href="help.html">Help</a></li></ul></div></nav><div class="container"><div class="left-panel">';
 		var video = '<video id="sampleVideo" src="' + currentVideo + '" width="530" height="385" controls></video>';
 		var part2 = '</div><div class="right-panel"><div>Original Transcript</div><div>';
@@ -154,17 +154,17 @@
 		var part3 = '</div><div>Edited Transcript</div><div>';
 		var currentTRAN = document.getElementById("trans").value;
 		var end = '</div></div></div></body></html>';
-		
+
 		saveHTMLFile(start + video + part2 + startTran + part3 + currentTRAN + end);
-	
+
 	}
-	  
+
 	  function random() {
 		  var videoArray = ["user1", "user2"];
 		  var result = videoArray[Math.floor(Math.random()*videoArray.length)];
 		  return result;
 	  }
-	
+
 	function saveHTMLFile(fileHTML){
 		var blob = new Blob([fileHTML], {type: 'text/html'});
 		var a = document.createElement("a");
@@ -174,7 +174,7 @@
 		document.body.appendChild(a);
 		a.click();
 	}
-  
+
   </script>
   <!--Boostrap Javascript-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
