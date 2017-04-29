@@ -146,7 +146,7 @@
 	
 	}
 	
-	
+
 	function myFun() {
 		var options = document.getElementsByName("comments");
 		for (var i = 0; i < options.length; i++) {
@@ -157,14 +157,14 @@
 		var text = document.getElementById("trans").value;
 		window.alert("Thanks for the edit!\n" + calc + "\n" + text);
 		document.getElementById("trans").value = "United forever in friendship and labor are Mighty republics will ever endure the great Soviet Union will listen Asian a dream of a people that Fortress secure long live our Soviet motherland built by the people like you have long live our people United in 3";
-		
-		
+
+
 		video.pause();
 		video.setAttribute('src', 'http://localhost:8000/CrowdSpeak-Updated-Using-Bootstrap/video/v3/testFile.webm');
 		video.load();
 
 	}
-	
+
 	function createHTML() {
 		var comment = '';
 		var options = document.getElementsByName("comments");
@@ -184,7 +184,7 @@
 		var video = '<video id="sampleVideo" src="' + videoFilename + '" width="530" height="385" controls></video>';
 		var part2 = '<div class="list-group"><div class="well"><p><b>Feedback</b></p>'
 		var feedback = '<ul class="comments">' + comment + '</ul>';
-		var part3 = '</div></div></div><div class="right-panel"><div class = "well"><div><b>Original Transcript</b></div><div>';
+		var part3 = '</div></div></div><div class="right-panel"><div class = "well"><div><b>Original Transcript</b></div><div>'
 		//before text
 		var part4 = '<div class="spaces"><p></p></div></div></div><div class = "well"><div><b>Edited Transcript</b></div><div>';
 		var currentTRAN = document.getElementById("trans").value;
@@ -192,14 +192,15 @@
 		
 		saveHTMLFile(start + start2 + video + part2 + feedback + part3 + startTran + part4 + currentTRAN + end);
 	
+
 	}
-	  
+
 	  function random() {
 		  var videoArray = ["raviUser1", "user2", "user3", "hellp", "Charlott"];
 		  var result = videoArray[Math.floor(Math.random()*videoArray.length)];
 		  return result;
 	  }
-	
+
 	function saveHTMLFile(fileHTML){
 		var blob = new Blob([fileHTML], {type: 'text/html'});
 		var a = document.createElement("a");
@@ -209,7 +210,7 @@
 		document.body.appendChild(a);
 		a.click();
 	}
-  
+
   </script>
   <!--Boostrap Javascript-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>

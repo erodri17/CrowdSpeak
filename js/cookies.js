@@ -4,12 +4,47 @@
  * @Email:  elmer.rodriguez6@gmail.com
  * @Filename: cookies.js
  * @Last modified by:   elmerxavierrodriguez
- * @Last modified time: 04-23-2017 <05:40:13 PM>
+ * @Last modified time: 04-23-2017 <08:17:07 PM>
  * @Copyright: © 2017 ELMER RODRIGUEZ ALL RIGHTS RESERVED
  */
 
+//
+// var cookiearray;
+//
+// function setCookie(cname, cvalue, exdays) {
+//     var d = new Date();
+//     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//     var expires = "expires="+ d.toUTCString();
+//     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+// }
+//
+// function getCookie(cname) {
+//     var name = cname + "=";
+//     var decodedCookie = decodeURIComponent(document.cookie);
+//     var ca = decodedCookie.split(';');
+//     for(var i = 0; i <ca.length; i++) {
+//         var c = ca[i];
+//         while (c.charAt(0) == ' ') {
+//             c = c.substring(1);
+// 						console.log("getCookie first character is empty");
+//         }
+//         if (c.indexOf(name) == 0) {
+//             return c.substring(name.length, c.length);
+// 						console.log("getCookie index equals zero");
+//         }
+//     }
+//     return "";
+// }
+//
+//
+// function checkCookie() {
+//     var usernameC = getCookie("username");
+//     if (usernameC != "") {
+// 				console.log("checkCookie");
+//         alert("Welcome again " + usernameC);
+//     }
+// }``
 
-var cookiearray;
 
 function WriteCookie() {
 	console.log("Start Cookies");
@@ -36,7 +71,7 @@ function ShowCookie() {
 	var allcookies = document.cookie;
 	
 	cookiearray = allcookies.split(';');
-	
+
 	for(var i = 0; i < cookiearray.length; i++){
 		name = cookiearray[i].split('=')[0];
 		value = cookiearray[i].split('=')[1];
@@ -47,28 +82,5 @@ function ShowCookie() {
 
 function ReadCookie(){
 	var x = document.cookie;
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-
-function checkCookie() {
-    var usernameC = getCookie("username");
-    if (usernameC != "") {
-        alert("Welcome again " + usernameC);
-    }
+	console.log("Read Cookie");
 }
