@@ -178,6 +178,15 @@
 				}
 			}
 		}
+		var currentTRAN = document.getElementById("trans").value;
+		
+		
+		//compare the two
+		var dmp = new diff_match_patch();
+		var d = dmp.diff_main(startTran, currentTRAN);
+		dmp.diff_cleanupSemantic(d);
+		var ds = dmp.diff_prettyHtml(d);
+		
 		
 		var start = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>USER FEEDBACK</title><link rel="stylesheet" href="css/stylesheet.css">';
 		var start2 = '<link rel="icon" type="image/png" href="images/favicon.png"><link href="css/bootstrap.min.css" rel="stylesheet"></head><body><nav class="navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><a class="navbar-brand" href="index.html">CrowdSpeak</a></div><ul class="nav navbar-nav"><li class="active"><a href="index.html">Home</a></li><li><a href="howitworks.html">How it Works</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="faq.html">FAQ</a></li><li><a href="help.html">Help</a></li></ul></div></nav><div class="container"><div class="left-panel">';
@@ -187,10 +196,10 @@
 		var part3 = '</div></div></div><div class="right-panel"><div class = "well"><div><b>Original Transcript</b></div><div>'
 		//before text
 		var part4 = '<div class="spaces"><p></p></div></div></div><div class = "well"><div><b>Edited Transcript</b></div><div>';
-		var currentTRAN = document.getElementById("trans").value;
+		var part5 = '<div class="spaces"><p></p></div></div></div><div class = "well"><div><b>Changes</b></div><div>'
 		var end = '</div></div></div></div></body></html>';
 		
-		saveHTMLFile(start + start2 + video + part2 + feedback + part3 + startTran + part4 + currentTRAN + end);
+		saveHTMLFile(start + start2 + video + part2 + feedback + part3 + startTran + part4 + currentTRAN + part5 + ds + end);
 	
 
 	}
@@ -215,6 +224,7 @@
   <!--Boostrap Javascript-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/diff_match_patch.js"></script>
   <!--END Javascript-->
 </body>
 
