@@ -45,6 +45,33 @@
 //     }
 // }``
 
+function LogIn(){
+	var user = escape(document.getElementById("loginUser").value) + ";";
+	var pass = escape(document.getElementById("loginPassword").value) + ";";
+	
+	if (document.getElementById("loginUser").value == "") {
+		alert("Username is blank!!!!!!!!!!!!!!!!!");
+		return;
+	}
+	
+	if (document.getElementById("loginPassword").value == "") {
+		alert("Password is blank!!!!!!!!!!!!!!!!!");
+		return;
+	}
+	
+	var a = ["raviUser1", "user2", "user3", "hellp", "Charlott", "demo"];
+	
+	for (var i = 0; i < a.length; i++) {
+        if (a[i] === loginUser) {
+            alert(loginUser " is signed in");
+			document.cookie = "username=" + loginUser;
+			return;
+        }
+    }
+	
+	alert(loginUser " failed to log in");
+}
+
 
 function WriteCookie() {
 	console.log("Start Cookies");
