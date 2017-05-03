@@ -63,13 +63,13 @@ function LogIn(){
 	
 	for (var i = 0; i < a.length; i++) {
         if (a[i] === loginUser) {
-            alert(loginUser " is signed in");
+            alert(loginUser + " is signed in");
 			document.cookie = "username=" + loginUser;
 			return;
         }
     }
 	
-	alert(loginUser " failed to log in");
+	alert(loginUser + " failed to log in");
 }
 
 
