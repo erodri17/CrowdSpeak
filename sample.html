@@ -18,20 +18,23 @@
 
 <body>
 
-<!--Navigation-->
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">CrowdSpeak</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="howitworks.html">How it Works</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="help.html">Help</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+  <!--Navigation-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">CrowdSpeak</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="create.html">Create</a></li>
+          <li><a href="sample.html">Edit</a></li>
+          <li><a href="howitworks.html">How it Works</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+  <!--END Navigation-->
 
     <!--Sign Up Section-->
     <li><a href="signup.html">Sign Up</a></li>
@@ -122,20 +125,20 @@
   var startTran;
   var user;
   var videoFilename;
-  
+
   loadPage();
-  
+
 	function loadPage(){
-	
+
 		user = random();
 		console.log(user);
 		//user = "raviUser1";
-		
+
 		videoFilename = 'files\\' + user + '.webm';
 		console.log(videoFilename);
 		video.setAttribute('src', videoFilename);
 		video.load();
-		
+
 		var read = new XMLHttpRequest();
 		var textName = 'files\\' + user + 'Text.txt';
 		read.open('GET', textName , false);
@@ -143,9 +146,9 @@
 		console.log(read.responseText);
 		startTran = read.responseText;
 		document.getElementById("trans").value = read.responseText;
-	
+
 	}
-	
+
 
 	function myFun() {
 		var options = document.getElementsByName("comments");
@@ -178,6 +181,7 @@
 				}
 			}
 		}
+
 		var currentTRAN = document.getElementById("trans").value;
 		
 		
